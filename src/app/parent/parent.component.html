@@ -1,0 +1,12 @@
+<!--Parent Component: Displays a list of user names.-->
+
+<div class="parent-container">
+    <h1>User List</h1>
+    <ul>
+      <li *ngFor="let user of users" (click)="selectUser(user)">
+        {{ user.name }}
+      </li>
+    </ul>
+
+    <app-child [user]="selectedUser"></app-child>
+</div>
